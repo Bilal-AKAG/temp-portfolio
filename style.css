@@ -867,3 +867,90 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* Perfect centering for hero and about sections */
+.center-hero, .center-about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.center-about .about-text, .center-hero .hero-text {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.personal-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+  margin: 30px auto;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .center-about .about-text, .center-hero .hero-text {
+    max-width: 100%;
+  }
+  .personal-info {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Remove image-related styles for a clean look */
+.hero-image, .profile-image, .about-image, .image-container, .image-bg {
+  display: none !important;
+}
+
+/* Dev icons color styles for development section */
+.dev-icons .dev-icon.html {
+  color: #e44d26;
+}
+.dev-icons .dev-icon.css {
+  color: #1572b6;
+}
+.dev-icons .dev-icon.js {
+  color: #f7df1e;
+  text-shadow: 0 1px 0 #2222;
+}
+.dev-icons .dev-icon.react {
+  color: #61dafb;
+}
+.dev-icons .dev-icon.node {
+  color: #3c873a;
+}
+.dev-icons .dev-icon.git {
+  color: #f34f29;
+}
+.dev-icons .dev-icon {
+  font-size: 1.5em;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Contact section icon styles */
+.contact-details .contact-item i {
+  color: var(--primary-color);
+  background: #f1f5fe;
+  border-radius: 50%;
+  padding: 8px;
+  font-size: 1.2em;
+  margin-right: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
